@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8"/>
         <meta http-equiv="refresh" content="60"/>
+        <script src="../Back-end/login/index.js"></script>
         <title>login</title>
     </head>
         <body>
             <h1>Dados</h1>
             <form name="form">
-                Usuario ou  e-mail: <input type="text"><br><br>
-                Senha: <input type="password" autocomplete="off"><br><br>
-                <input type="button" name="button" value="LOGIN" onclick="acess(this.form)">
+                E-mail: <input type="text" name="user"><br><br>
+                Senha: <input type="password" name="password" autocomplete="off"><br><br>
+                <input type="button" name="button" value="LOGIN" onclick="Login(this.form)">
             </form>
         </body>
 </html>
