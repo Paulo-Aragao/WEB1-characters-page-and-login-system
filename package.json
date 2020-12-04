@@ -1,0 +1,19 @@
+{
+  "name": "WEB1-characters-page-and-login-system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/paulocosmico/WEB1-characters-page-and-login-system.git",
+  "author": "Paulo Aragão <33064367+paulocosmico@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon Back-end/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "sucrase": "^3.16.0"
+  }
+}
