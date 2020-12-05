@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="refresh" content="60">
   <title>Soul of Stones</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
@@ -17,6 +18,12 @@
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
   <link href="css/style.css" rel="stylesheet">
+
+  <script src="lib/jquery/jquery.min.js"></script></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+
+  <script src="js/main.js"></script>
 
 </head>
 
@@ -63,18 +70,13 @@
   <section id="works"></section>
   <div class="container">
     <div class="row centered mt mb">
-        <head>
-            <meta charset="UTF-8"/>
-            <meta http-equiv="refresh" content="60"/>
-            <script src="../Back-end/login/index.js"></script>
-        </head>
-            <body>
-                <h1>Dados</h1>
-                <form name="form">
-                    E-mail: <input type="text" name="user"><br><br>
-                    <input type="button" name="button" value="LOGIN" onclick="Login(this.form)">
-                </form>
-            </body>
+      <body>
+          <h1>Dados</h1>
+          <form name="form" id="form-login">
+            E-mail: <input type="text" name="user" placeholder="E-mail"><br><br>
+            <input type="submit" name="button" value="LOGIN">
+          </form>
+      </body>
     </div>
   </div>
 
@@ -115,12 +117,6 @@
       </div>
     </div>
   </div>
-
-  <script src="lib/jquery/jquery.min.js"></script></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/php-mail-form/validate.js"></script>
-
-  <script src="js/main.js"></script>
 
 </body>
 </html>

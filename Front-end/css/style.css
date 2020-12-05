@@ -159,12 +159,14 @@ h7 {
 	color: #f2f2f2;
 	margin-left: 10px;
 }
+
 .gallery {
 	margin-top: 30px;
 }
 
 .gallery img:hover {
-	opacity: 0.4;
+  opacity: 0.4;
+  cursor: pointer;
 }
 
 @-webkit-keyframes animate-loading {

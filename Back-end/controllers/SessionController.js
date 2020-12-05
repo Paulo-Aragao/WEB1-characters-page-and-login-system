@@ -1,26 +1,30 @@
 import User from '../models/User'
 
 class SessionController{
-    async store(req,res){
-        const {email} = req.body;
+    async store(req, res){
+        const { email } = req.body;
         if(EmailValidation(email)){
-            let user = await User.findOne({email});
+            let user = await User.findOne({ email });
             if(!user){
-                let user = await User.create({email,level:0,cash:0,cards:[{}]});
+                let user = await User.create({ email, level: 0, cash: 0, chars: [{}] });
                 return res.json(user);
-            }else{
+            } else {
                 return res.json(user);
             }
-        }else{
-            return res.json('invalid email');
+        } else {
+            return res.status(400).send('Invalid email');
         }
-        
     }
-    async update(req,res){
-        const {user_id} = req.params;
-        const user = await User.updateOne({_id: user_id},{
-            cards:[{name:'a',image:'saasd'},{name:'dasa',image:'sdsasaasd'}],
-        });
+    async update(req, res){
+        const { _id } = req.params;
+        const { email, level, cash, chars } = req.body;
+
+        const user = await User.findOneAndUpdate(
+          { _id },
+          { email, level, cash, chars },
+          { new: true }
+        );
+
         return res.json(user);
     }
     
