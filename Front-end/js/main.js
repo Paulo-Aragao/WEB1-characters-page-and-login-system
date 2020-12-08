@@ -33,6 +33,7 @@ function loginUser(email) {
     .then(
       function(response) {
         if (response.ok) {
+          document.location.href="index.html";
           return response.json();
         }
         throw new Error('Não foi possível fazer seu login!!');
@@ -71,9 +72,19 @@ $(document).ready(function() {
 
   $('.gallery').click(function(event) {
     const name = $(event.target).data('name');
-    const { chars } = getUserInfo();
-    if (!(chars.includes(name))) {
-      updateUser({ chars: [ ...chars, name ] });
+    if(getUserInfo()){
+      const { chars } = getUserInfo();
+      if (!(chars.includes(name))) {
+        alert("character added to your account");
+        updateUser({ chars: [ ...chars, name ] });
+      }else{
+        alert("you already have this character");
+      }
+    }else{
+      alert("you need to be logged in to buy");
     }
+    
   });
 });
+
+
